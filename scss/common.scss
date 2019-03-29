@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+
+html,body {
+  overflow-x: hidden;
+}
+
+$font-size: 16px;
+$font-color: #141c1f;
+$mainFont: 'Lato-Regular', sans-serif;
+
+$blue: #00ade4;
+$green: #29d807;
+$border: #d7d7d7;
+$footer: #10546b;
+
+
+@font-face {
+ font-family: 'Lato-Regular';
+   font-style: normal;
+   font-weight: 400;
+ src: url('../fonts/Lato-Regular.ttf');
+}
+
+
+body {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  width: 100%;
+
+  min-height: 100vh;
+  font-size: $font-size;
+  font-family: $mainFont;
+  color: $font-color;
+  overflow-x: hidden;
+}
+
+.btn {
+  min-width: 202px;
+  width: 100%;
+  padding: 11px 16.5px;
+  line-height: normal;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.5s ease;
+  font-family: $mainFont;
+  &--blue {
+    background: $blue;
+    text-shadow: 2px 2px 3px #0083b6;
+  }
+  &--green {
+    background: $green;
+    text-shadow: 2px 2px 3px #479f37;
+  }
+}
+
+
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

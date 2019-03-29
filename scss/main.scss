@@ -1,0 +1,146 @@
+
+
+header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background: black;
+  margin-bottom: 40px;
+
+  .wrapp {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: auto;
+
+  }
+}
+
+main  {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  justify-content: space-between;
+  .section {
+    &--cell {
+      display: flex;
+      width: 705px;
+      border-bottom: 1px solid $border;
+      padding-bottom: 15px;
+      &:not(:first-of-type) {
+        margin-top: 20px;
+      }
+      & > div {
+        // flex: 1 auto;
+      }
+      &__img {
+        flex: 0 138px;
+      }
+      &__descrip {
+        flex: 1 0px;
+        padding: 0 20px;
+        p {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        span {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      &__price {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        text-align: center;
+        span {
+          font-size: 24px;
+          padding: 0 0 20px;
+        }
+      }
+    }
+  }
+}
+
+aside {
+  position: relative;
+  .cart {
+    width: calc(100% - 60px);
+    max-width: 320px;
+    padding: 20px 15px;
+    border: 1px solid $border;
+    border-radius: 5px;
+    margin-left: auto;
+    font-size: 14px;
+    &--empty {
+      .cart__list {
+        p {
+          display: block;
+          font-size: 22px;
+        }
+      }
+
+    }
+    &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      span {
+        font-size: 18px;
+        line-height: 18px;
+        margin-left: 15px;
+      }
+    }
+    &__list {
+      border-bottom: 1px solid $border;
+      padding-bottom: 20px;
+      p {
+        display: none;
+      }
+
+      &--item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        position: relative;
+        .delete-btn {
+          display: block;
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: -9px;
+          top: 2px;
+          background: url('../img/delete-ico.png') 100% 100% no-repeat;
+          background-size: cover;
+          cursor: pointer;
+        }
+        span {
+          &:first-of-type {
+            position: relative;
+            padding-left: 5%;
+            margin-right: 8%;
+          }
+        }
+      }
+    }
+    &__total {
+      text-align: right;
+      span {
+        display: inline-block;
+        margin: 15px 0 35px 0;
+      }
+    }
+    &--sticky {
+      max-width: 235px;
+      position: fixed;
+      top: 0;
+      right: calc((100% - 1000px)/2);
+    }
+  }
+}
+
+footer {
+  min-height: 125px;
+  background: $footer;
+}
